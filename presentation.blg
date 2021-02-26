@@ -1,0 +1,18 @@
+[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
+[0] Config.pm:315> INFO - Logfile is 'presentation.blg'
+[138] biber-MSWIN64:330> INFO - === 
+[161] Biber.pm:415> INFO - Reading 'presentation.bcf'
+[336] Biber.pm:952> INFO - Found 8 citekeys in bib section 0
+[356] Biber.pm:4334> INFO - Processing section 0
+[373] Biber.pm:4523> INFO - Looking for bibtex format file 'biblio/external.bib' for section 0
+[373] Utils.pm:395> WARN - Data source 'biblio/external.bib' is empty, ignoring
+[373] Biber.pm:4523> INFO - Looking for bibtex format file 'biblio/author.bib' for section 0
+[383] bibtex.pm:1682> INFO - LaTeX decoding ...
+[405] bibtex.pm:1494> INFO - Found BibTeX data source 'biblio/author.bib'
+[484] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[484] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[484] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'ru-RU'
+[484] Biber.pm:4168> INFO - No sort tailoring available for locale 'ru-RU'
+[492] bbl.pm:651> INFO - Writing 'presentation.bbl' with encoding 'UTF-8'
+[497] bbl.pm:754> INFO - Output to presentation.bbl
+[497] Biber.pm:128> INFO - WARNINGS: 1

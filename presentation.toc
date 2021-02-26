@@ -1,0 +1,20 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {russian}{}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Formulation of the problem}{3}{0}{2}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}
+\babel@toc {russian}{}

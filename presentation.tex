@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%                       Presentation Template                     %%%%%%%
+%%%%%%%                         By Zholobov Y. V.                       %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%                         Last modify date                        %%%%%%%
+%%%%%%%                           20.01.2021                            %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifpresentation % Условие, проверяющее, что документ --- презентация
+\presentationtrue
+\documentclass[aspectratio=169, xcolor={dvipsnames,svgnames, table, hyperref}]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{setup/setup}               % Общие настройки шаблона
+\input{setup/packages}            % Пакеты общие для диссертации и автореферата
+\input{setup/data}                % Основные сведения
+\input{setup/fonts}               % Определение шрифтов (частичное)
+
+\input{content/setup}         % Настройки презентации
+\input{content/prespackages}  % Библиотеки презентации
+\input{content/styles}  % Библиотеки презентации
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define where theme files are located. ('/styles')
+\usepackage{styles/spbu2020/spbu2020}
+\usefolder{styles/spbu2020}
+% Use SPbU theme v0.1 beta
+\usetheme{spbu2020}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Библиография. Выбор движка для реализации %%%
+\ifnumequal{\value{bibliosel}}{0}{%
+    \input{biblio/predefined}   % Встроенная реализация с загрузкой файла через движок bibtex8
+}{
+    \input{biblio/biblatex}     % Реализация пакетом biblatex через движок biber
+}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% Title information (fill this fields in setup/data.tex)
+\title{\thesisTitle}
+%\subtitle{Science research work review}
+\subtitle{}
+\author{%
+    \texorpdfstring{%
+        \emph{Speaker:}~\thesisAuthorShort\\%
+        \emph{Supervisor:}%~\supervisorRegaliaShort
+        ~\supervisorFioShort\\%
+        %
+    }{\thesisAuthor}%
+}
+\date{\thesisCity, \thesisYear}
+\institute{\thesisOrganization, \thesisYear}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{document}
+
+% Define new names for objects
+\gappto\captionsrussian{\input{content/renames}\unskip} % for polyglossia and babel
+\input{content/renames}
+
+% Generate titlepage
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}\frametitle{Table of contest}
+% \tableofcontents
+%\end{frame}
+
+\include{content/part1}           % Глава 1
+\include{content/part2}           % Глава 2
+\include{content/part3}           % Глава 3
+\include{content/conclusion}      % Заключение
+
+
+\end{document} 

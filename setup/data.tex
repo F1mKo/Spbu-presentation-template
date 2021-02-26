@@ -1,0 +1,119 @@
+%%% Основные сведения %%%
+\newcommand{\thesisAuthorLastName}{Zholobov}
+\newcommand{\thesisAuthorOtherNames}{Yefim Vital'evich}
+\newcommand{\thesisAuthorInitials}{Ye.~V.}
+\newcommand{\thesisAuthor}             % Презентация, ФИО автора
+{%
+    \texorpdfstring{% \texorpdfstring takes two arguments and uses the first for (La)TeX and the second for pdf
+        \thesisAuthorLastName~\thesisAuthorOtherNames% так будет отображаться на титульном листе или в тексте, где будет использоваться переменная
+    }{%
+        \thesisAuthorLastName, \thesisAuthorOtherNames% эта запись для свойств pdf-файла. В таком виде, если pdf будет обработан программами для сбора библиографических сведений, будет правильно представлена фамилия.
+    }
+}
+\newcommand{\thesisAuthorShort}        % Презентация, ФИО автора инициалами
+{\thesisAuthorInitials~\thesisAuthorLastName}
+\newcommand{\thesisTitle}              % Презентация, название
+{How to make a presentation in Latex}
+\newcommand{\thesisAuthorLevel}    % Презентация, статус (должность), номер
+{Bachelor}
+\newcommand{\thesisSpecialtyNumber}    % Презентация, направление (специальность), номер
+{Number of direction}
+\newcommand{\thesisSpecialtyTitle}     % Презентация, направление (специальность), название (Согласно требованиям СПБГУ https://edu.spbu.ru/images/data/normativ_acts/local/20180703_6616_1.pdf)
+{Name of direction}
+\newcommand{\thesisProgramNumber}    % Презентация, программа, номер
+{Number of education program}
+\newcommand{\thesisProgramTitle}     % Презентация, программа, название (Согласно требованиям СПБГУ https://edu.spbu.ru/images/data/normativ_acts/local/20180703_6616_1.pdf)
+{Name of education program}
+\newcommand{\thesisCity}               % Презентация, город написания диссертации
+{St. Petersburg}
+\newcommand{\thesisYear}               % Презентация, год написания диссертации
+{\the\year}
+\newcommand{\thesisOrganization}       % Презентация, организация
+{St. Petersburg State University}
+\newcommand{\thesisOrganizationShort}  % Презентация, краткое название организации для доклада
+{SPbU}
+
+\newcommand{\thesisInOrganization}     % Презентация, организация в предложном падеже: Работа выполнена в ...
+{Name of Organization}
+
+\newcommand{\supervisorFio}              % Научный руководитель, ФИО
+{Смирнов Николай Васильевич}
+\newcommand{\supervisorRegaliaPos}          % Научный руководитель, регалии
+{профессор}
+\newcommand{\supervisorRegaliaDeg}          % Научный руководитель, регалии
+{доктор физ.-мат. наук}
+\newcommand{\supervisorCathedra}         % Научный руководитель, ФИО
+{кафедра \\ моделирования экономических \\ систем}
+\newcommand{\supervisorFioShort}         % Научный руководитель, ФИО
+{N.\,V.~Smirnov}
+\newcommand{\supervisorRegaliaShort}     % Научный руководитель, регалии
+{д.~физ.мат.~наук,~проф.}
+
+
+%\newcommand{\supervisorFio}              % Научный руководитель, ФИО
+%{Смирнов Николай Васильевич}
+%\newcommand{\supervisorRegaliaPos}          % Научный руководитель, регалии
+%{профессор}
+%\newcommand{\supervisorRegaliaDeg}          % Научный руководитель, регалии
+%{доктор физ.-мат. наук}
+%\newcommand{\supervisorCathedra}         % Научный руководитель, ФИО
+%{кафедра \\ моделирования экономических \\ систем}
+%\newcommand{\supervisorFioShort}         % Научный руководитель, ФИО
+%{Н.\,В.~Смирнов}
+%\newcommand{\supervisorRegaliaShort}     % Научный руководитель, регалии
+%{д.~физ.мат.~наук,~проф.}
+
+%% \newcommand{\supervisorTwoDead}{}        % Рисовать рамку вокруг фамилии
+%% \newcommand{\supervisorTwoFio}           % Второй научный руководитель, ФИО
+%% {\fixme{Фамилия Имя Отчество}}
+%% \newcommand{\supervisorTwoRegalia}       % Второй научный руководитель, регалии
+%% {\fixme{уч. степень, уч. звание}}
+%% \newcommand{\supervisorTwoFioShort}      % Второй научный руководитель, ФИО
+%% {\fixme{И.\,О.~Фамилия}}
+%% \newcommand{\supervisorTwoRegaliaShort}  % Второй научный руководитель, регалии
+%% {\fixme{уч.~ст.,~уч.~зв.}}
+
+\newcommand{\opponentFio}              % Оппонент 1, ФИО
+{Смирнов Николай Васильевич}
+\newcommand{\opponentRegaliaPos}          % Оппонент 1, регалии
+{профессор}
+\newcommand{\opponentRegaliaDeg}          % Оппонент 1, регалии
+{доктор физ.-мат. наук}
+\newcommand{\opponentCathedra}         % Оппонент 1, ФИО
+{кафедра \\ моделирования экономических \\ систем}
+%\newcommand{\opponentJobPlace}      % Оппонент 1, место работы
+%{Не очень длинное название для места работы}
+\newcommand{\opponentFioShort}         % Оппонент 1, ФИО
+{Н.\,В.~Смирнов}
+\newcommand{\opponentRegaliaShort}     % Оппонент 1, регалии
+{д.~физ.мат.~наук,~проф.}
+
+%\newcommand{\opponentOneFio}           % Оппонент 1, ФИО
+%{Фамилия Имя Отчество}
+%\newcommand{\opponentOneRegalia}       % Оппонент 1, регалии
+%{доктор физико-математических наук, профессор}
+%\newcommand{\opponentOneJobPlace}      % Оппонент 1, место работы
+%{Не очень длинное название для места работы}
+%\newcommand{\opponentOneJobPost}       % Оппонент 1, должность
+%{старший научный сотрудник}
+
+%\newcommand{\opponentTwoFio}           % Оппонент 2, ФИО
+%{\fixme{Фамилия Имя Отчество}}
+%\newcommand{\opponentTwoRegalia}       % Оппонент 2, регалии
+%{\fixme{кандидат физико-математических наук}}
+%\newcommand{\opponentTwoJobPlace}      % Оппонент 2, место работы
+%{\fixme{Основное место работы c длинным длинным длинным длинным названием}}
+%\newcommand{\opponentTwoJobPost}       % Оппонент 2, должность
+%{\fixme{старший научный сотрудник}}
+
+%% \newcommand{\opponentThreeFio}         % Оппонент 3, ФИО
+%% {\fixme{Фамилия Имя Отчество}}
+%% \newcommand{\opponentThreeRegalia}     % Оппонент 3, регалии
+%% {\fixme{кандидат физико-математических наук}}
+%% \newcommand{\opponentThreeJobPlace}    % Оппонент 3, место работы
+%% {\fixme{Основное место работы c длинным длинным длинным длинным названием}}
+%% \newcommand{\opponentThreeJobPost}     % Оппонент 3, должность
+%% {\fixme{старший научный сотрудник}}
+
+\providecommand{\keywords}%            % Ключевые слова для метаданных PDF диссертации и автореферата
+{}

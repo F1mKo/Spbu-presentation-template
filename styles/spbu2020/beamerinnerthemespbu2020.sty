@@ -1,0 +1,60 @@
+\mode<presentation>
+
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \ifnum\thepage=1\relax%
+    \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \fill[color=white] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \node[anchor=south west,inner sep=0] at (0.5,7.5) {\includegraphics[scale=0.31]{logo_eng.pdf}};
+    \node[anchor=south west,inner sep=0] at (15,7.9) {\includegraphics[scale=0.12]{pmpu_logo.png}};
+    \node[anchor=south west,inner sep=0, opacity = 0.05, color=spbu_gray] at (6,0) {\includegraphics[scale=2.5, trim={0 1.5cm 0 0cm}, clip]{spbu_gerb.png}};
+    \fill[color=spbu_red] (0.7,7.7) rectangle(6.5,7.8);
+    \fill[color=spbu_gray] (6.5,7.7) rectangle(7,7.8);
+    \fill[color=spbu_darkgray] (7,7.7) rectangle(8.5,7.8);
+    \fill[color=spbu_gray] (8.5,7.7) rectangle(10,7.8);
+    \fill[color=spbu_red] (10,7.7) rectangle(11.2,7.8);
+    \fill[color=spbu_gray] (11.2,7.7) rectangle(16,7.8);
+    \fill[color=spbu_red] (0.7,0.4) rectangle(16,1);
+    \fi
+  \ifnum\thepage>1\relax%
+    \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \fill[color=white] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \node[anchor=south west,inner sep=0] at (0,7.9) {\includegraphics[scale=0.228]{logo_eng.pdf}};
+    %\node[anchor=south west,inner sep=0, opacity = 0.1, color=spbu_gray] at (6,0) {\includegraphics[scale=2, trim=0.3 0.3 0.8 0.8]{spbu_gerb.png}};
+    \fill[color=spbu_red] (3,8.1) rectangle(16,9) node[pos=0.5]{\color{white}\insertframetitle};
+    %\fill[color=spbu_gray] (6,7.4) rectangle(6.7,7.9);
+    \fill[color=spbu_darkgray] (0,0) rectangle(15,0.8);
+    \node[anchor=south west,inner sep=0, color=white] at (0.8,0.27){\tiny\makefield{\faEnvelope[regular]}{st066660@student.spbu.ru}};
+    \node[anchor=south west,inner sep=0, color=white] at (4.3,0.27){\tiny\makefield{\faEnvelope[regular]}{email2}};
+    \node[anchor=south west,inner sep=0, color=white] at (7.8,0.27){\tiny\makefield{\faVk}{\MYhref[white]{https://vk.com/}{Vk adress}}};
+    \node[anchor=south west,inner sep=0, color=spbu_red] at (15.25,0.1) {\includegraphics[scale=0.09]{pmpu_logo.png}};
+    \filldraw[color=spbu_red, fill=spbu_background_gray, very thick](0.4,0.4) circle (0.3) node[align=center]{\color{spbu_darkgray}\tiny\insertframenumber};
+    %\node[anchor=south west] at (0.2cm,0.2cm) {\color{text}\tiny\insertframenumber};
+   \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{spbu2020}[1][]
+{
+    \begin{center}
+    \vskip2.8cm
+    \begin{beamercolorbox}[leftskip=0.5cm,center,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par
+      \vskip0.5cm
+      \usebeamerfont{subtitle}\insertsubtitle\par
+    \end{beamercolorbox}%
+    \vskip0.75cm%
+    \begin{beamercolorbox}[leftskip=0.5cm,center,#1]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+    \vskip1.3cm%
+    \begin{beamercolorbox}[leftskip=0.5cm,center,#1]{institute}
+      \usebeamerfont{institute}\insertinstitute%
+    \end{beamercolorbox}
+    \end{center}
+}
+
+\mode
+<all>
